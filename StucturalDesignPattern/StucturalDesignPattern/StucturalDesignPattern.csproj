@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Adapter2\Adapter2.csproj" />
+    <ProjectReference Include="..\Adapter3\Adapter3.csproj" />
     <ProjectReference Include="..\Adapter\Adapter.csproj" />
   </ItemGroup>
 

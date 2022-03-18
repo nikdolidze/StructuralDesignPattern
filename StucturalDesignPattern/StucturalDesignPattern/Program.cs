@@ -1,6 +1,8 @@
 ﻿using Adapter;
 using Adapter2;
+using Adapter3;
 using System;
+using System.Collections.Generic;
 using static Adapter._2proviers.StarWarsCharacterDisplayService;
 
 namespace StucturalDesignPattern
@@ -10,19 +12,26 @@ namespace StucturalDesignPattern
         static void Main(string[] args)
         {
 
+
+
+            Adapter3();
+
             Adapter2();
 
             Adapter();
 
         }
 
+        public static void Adapter3()
+        {
+            var adapter = new AdapterExample();
+            adapter.ExecuteClient();
+        }
+
 
         public async static void Adapter2()
         {
-            var fourth = new ImproveAdapterIntroduction.StarWarsCharacterDisplayService(
-                               new ImproveAdapterIntroduction.CharacterFileSourceAdapter("People.json", new ImproveAdapterIntroduction
-                               .CharacterFileSource()));
-
+          
             var starWarsCharacterDisplayService = new StarWarsCharacterDisplayService();
             await starWarsCharacterDisplayService.ListCharacters();
 
@@ -32,6 +41,12 @@ namespace StucturalDesignPattern
 
             var adapter = new AdapterIntroduction.StarWarsCharacterDisplayService();
             await adapter.ListCharacters(AdapterIntroduction.CharacterSource.File);
+
+
+            var betterCode = new ImproveAdapterIntroduction.StarWarsCharacterDisplayService(
+                                     new ImproveAdapterIntroduction.CharacterFileSourceAdapter("People.json", new ImproveAdapterIntroduction.CharacterFileSource()));
+
+            await betterCode.ListCharacters();
 
 
 

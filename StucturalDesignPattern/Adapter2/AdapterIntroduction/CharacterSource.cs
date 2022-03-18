@@ -1,4 +1,4 @@
-﻿namespace AdapterIntroduction
+﻿namespace AdapterIntroduction { 
     public enum CharacterSource
     {
         File,

@@ -18,8 +18,6 @@ namespace ImproveAdapterIntroduction
 
         public async Task<string> ListCharacters()
         {
-          
-            
             var people = await _characterSourceAdapter.GetCharacters();
 
             var sb = new StringBuilder();
