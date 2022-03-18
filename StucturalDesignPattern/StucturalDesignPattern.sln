@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter2", "Adapter2\Adapte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter3", "Adapter3\Adapter3.csproj", "{10105089-764F-4F54-A3DA-694AF5E7EE11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter4", "Adapter4\Adapter4.csproj", "{F3A8D346-7647-480A-A881-2A76F9B140BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{10105089-764F-4F54-A3DA-694AF5E7EE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10105089-764F-4F54-A3DA-694AF5E7EE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10105089-764F-4F54-A3DA-694AF5E7EE11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A8D346-7647-480A-A881-2A76F9B140BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A8D346-7647-480A-A881-2A76F9B140BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A8D346-7647-480A-A881-2A76F9B140BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A8D346-7647-480A-A881-2A76F9B140BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{520071C8-52C3-44AC-BAC4-2FFD7B572850} = {436BD81C-C05D-4A53-A380-E286500B1533}
 		{C6D9BBA3-F59B-4E19-B6DF-4B220F043E9C} = {436BD81C-C05D-4A53-A380-E286500B1533}
 		{10105089-764F-4F54-A3DA-694AF5E7EE11} = {436BD81C-C05D-4A53-A380-E286500B1533}
+		{F3A8D346-7647-480A-A881-2A76F9B140BF} = {436BD81C-C05D-4A53-A380-E286500B1533}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EAC1AE85-04EE-4ACF-8A73-46143B0F3B7A}
