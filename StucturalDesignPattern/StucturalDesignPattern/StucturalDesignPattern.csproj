@@ -9,6 +9,8 @@
     <ProjectReference Include="..\Adapter2\Adapter2.csproj" />
     <ProjectReference Include="..\Adapter3\Adapter3.csproj" />
     <ProjectReference Include="..\Adapter\Adapter.csproj" />
+    <ProjectReference Include="..\Bridge2\Bridge2.csproj" />
+    <ProjectReference Include="..\Bridge\Bridge.csproj" />
   </ItemGroup>
 
 </Project>
