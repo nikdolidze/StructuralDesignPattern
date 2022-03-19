@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge2", "Bridge2\Bridge2.csproj", "{FA09A726-AA82-4435-8075-E8069CF15B69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge3", "Bridge3\Bridge3.csproj", "{6AEFF0C6-8B32-4A01-84E0-BE2D51A6034E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{FA09A726-AA82-4435-8075-E8069CF15B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA09A726-AA82-4435-8075-E8069CF15B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA09A726-AA82-4435-8075-E8069CF15B69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AEFF0C6-8B32-4A01-84E0-BE2D51A6034E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AEFF0C6-8B32-4A01-84E0-BE2D51A6034E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AEFF0C6-8B32-4A01-84E0-BE2D51A6034E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AEFF0C6-8B32-4A01-84E0-BE2D51A6034E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{F3A8D346-7647-480A-A881-2A76F9B140BF} = {436BD81C-C05D-4A53-A380-E286500B1533}
 		{031AC0B8-2A9F-4B69-83EA-B0D93DCBADD5} = {541AED04-772D-475F-BC43-C7F5C8E5F75C}
 		{FA09A726-AA82-4435-8075-E8069CF15B69} = {541AED04-772D-475F-BC43-C7F5C8E5F75C}
+		{6AEFF0C6-8B32-4A01-84E0-BE2D51A6034E} = {541AED04-772D-475F-BC43-C7F5C8E5F75C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EAC1AE85-04EE-4ACF-8A73-46143B0F3B7A}
