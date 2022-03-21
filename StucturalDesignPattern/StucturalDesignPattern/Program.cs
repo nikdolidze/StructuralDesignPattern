@@ -9,6 +9,7 @@ using Decorator2;
 using System;
 using static Adapter._2proviers.StarWarsCharacterDisplayService;
 using Facade;
+using Proxy;
 
 namespace StucturalDesignPattern
 {
@@ -18,13 +19,12 @@ namespace StucturalDesignPattern
         {
 
 
-
-          
-
+     
 
 
 
             Console.ReadKey();
+            Proxy();
             Facade();
             Composite();
             Decorator2();
@@ -35,6 +35,27 @@ namespace StucturalDesignPattern
             Adapter2();
             Adapter();
 
+        }
+        public static void Proxy()
+        {
+            //without proxy
+            Console.WriteLine("Constructing document");
+            var myDocument = new Document("myDocumetn.txt");
+            Console.WriteLine("Document constuectes");
+            myDocument.DisplayDocument();
+            Console.WriteLine();
+
+            //with proxy
+            Console.WriteLine("Constructing document proxy");
+            var myDocumentProxy = new DocumentProxy("myDocumetn.txt");
+            Console.WriteLine("Document constuectes");
+            myDocumentProxy.DisplayDocument();
+            myDocumentProxy.DisplayDocument();
+            Console.WriteLine();
+
+            //with chain proxy 
+            var myProcetedDocumentProxy = new ProtectedDocumentProxy("nika", "Viewer");
+            myProcetedDocumentProxy.DisplayDocument();
         }
         public static void Facade()
         {
