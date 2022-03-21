@@ -4,7 +4,6 @@
  */
 namespace Bridge3
 {
-
     // top level abstraction
     public abstract class Vehicle
     {
@@ -15,37 +14,22 @@ namespace Bridge3
             Make.StartCar();
         }
         public abstract bool AllowedToDrive(string person);
-
     }
     public abstract class Make
     {
         public abstract void PerformRitual();
         public abstract void StartCar();
     }
-
     // implementation
     public class Lada : Make
     {
-        public override void PerformRitual()
-        {
-            Console.WriteLine("Hit the cer");
-        }
-
-        public override void StartCar()
-        {
-            Console.WriteLine("Start a car");
-        }
+        public override void PerformRitual() => Console.WriteLine("Hit the cer");
+        public override void StartCar() => Console.WriteLine("Start a car");
         public class Volvo : Make
         {
-            public override void PerformRitual()
-            {
-                Console.WriteLine();
-            }
+            public override void PerformRitual() => Console.WriteLine();
 
-            public override void StartCar()
-            {
-                Console.WriteLine();
-            }
+            public override void StartCar() => Console.WriteLine();
         }
 
         // lower level abstraction
@@ -83,3 +67,4 @@ namespace Bridge3
         //{ }
 
     }
+}

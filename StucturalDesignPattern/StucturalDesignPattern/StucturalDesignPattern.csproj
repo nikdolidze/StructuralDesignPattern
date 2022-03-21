@@ -11,6 +11,8 @@
     <ProjectReference Include="..\Adapter\Adapter.csproj" />
     <ProjectReference Include="..\Bridge2\Bridge2.csproj" />
     <ProjectReference Include="..\Bridge\Bridge.csproj" />
+    <ProjectReference Include="..\Decorator2\Decorator2.csproj" />
+    <ProjectReference Include="..\Decorator\Decorator.csproj" />
   </ItemGroup>
 
 </Project>

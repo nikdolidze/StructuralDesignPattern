@@ -3,6 +3,8 @@ using Adapter2;
 using Adapter3;
 using Bridge;
 using Bridge2;
+using Decorator;
+using Decorator2;
 using System;
 using System.Collections.Generic;
 using static Adapter._2proviers.StarWarsCharacterDisplayService;
@@ -14,9 +16,10 @@ namespace StucturalDesignPattern
         static void Main(string[] args)
         {
 
+          
             Console.ReadKey();
-
-
+            Decorator2();
+            Decorator();
             Bridge2();
             Bridge();
             Adapter3();
@@ -25,24 +28,40 @@ namespace StucturalDesignPattern
 
         }
 
+        public static void Decorator2()
+        {
+            var regularOrder = new RegularOrder();
+            Console.WriteLine(regularOrder.CalculateTotalOrderPrice());
+            Console.WriteLine();
+            var preOrder = new Preorder();
+            Console.WriteLine(preOrder.CalculateTotalOrderPrice());
+            Console.WriteLine();
+            var premiumPreorder = new PremiumPreorder(preOrder);
+            Console.WriteLine(premiumPreorder.CalculateTotalOrderPrice());
 
 
+        }
 
+        public static void Decorator()
+        {
+            var cloudeService = new CloudMainServer();
+            cloudeService.SendMail("nika");
 
+            var onPremiseMainService = new OnPremiseMainService();
+            onPremiseMainService.SendMail("dolidze");
 
+            // add behaviour
+            var statisticDecorator = new StatisticsDecorator(cloudeService);
+            statisticDecorator.SendMail("nika");
 
+            var databaseDecorator = new MessageDatabaseDecorator(onPremiseMainService);
+            databaseDecorator.SendMail("dolidze");
 
-
-
-
-
-
-
-
-
-
-
-
+            foreach (var item in databaseDecorator.SentMessages)
+            {
+                Console.WriteLine(item);
+            }
+        }
 
         public static void Bridge2()
         {
