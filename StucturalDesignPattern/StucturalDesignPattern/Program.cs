@@ -3,21 +3,30 @@ using Adapter2;
 using Adapter3;
 using Bridge;
 using Bridge2;
+using Composite;
 using Decorator;
 using Decorator2;
 using System;
-using System.Collections.Generic;
 using static Adapter._2proviers.StarWarsCharacterDisplayService;
+using Facade;
 
 namespace StucturalDesignPattern
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
 
+
+
           
+
+
+
+
             Console.ReadKey();
+            Facade();
+            Composite();
             Decorator2();
             Decorator();
             Bridge2();
@@ -26,6 +35,34 @@ namespace StucturalDesignPattern
             Adapter2();
             Adapter();
 
+        }
+        public static void Facade()
+        {
+            var facade = new DiscoutFacade();
+            Console.WriteLine($"Discount percentage for cusomer with id 1  :  {facade.CalculateDiscountPercentage(1)}");
+            Console.WriteLine($"Discount percentage for cusomer with id 10  :  {facade.CalculateDiscountPercentage(10)}");
+            facade.CalculateDiscountPercentage(8);
+
+        }
+        public static void Composite()
+        {
+            var root = new Directory("root", 0);
+            var topLeaveFile = new File("toplevel.txt", 100);
+            var topLeveldirectory1 = new Directory("topLeveldirectory1", 4);
+            var topLeveldirectory2 = new Directory("topLeveldirectory2", 4);
+
+            root.Add(topLeaveFile);
+            root.Add(topLeveldirectory1);
+            root.Add(topLeveldirectory2);
+
+            var sublevelfile = new File("SublevelFile1", 200);
+            var sublevelfile2 = new File("SublevelFile2", 150);
+            topLeveldirectory2.Add(sublevelfile);
+            topLeveldirectory2.Add(sublevelfile2);
+
+            Console.WriteLine($"Size of topLevelDirectory1: {topLeveldirectory1.GetSize()}");
+            Console.WriteLine($"Size of topLevelDirectory2: {topLeveldirectory2.GetSize()}");
+            Console.WriteLine($"Size of root: {root.GetSize()}");
         }
 
         public static void Decorator2()
