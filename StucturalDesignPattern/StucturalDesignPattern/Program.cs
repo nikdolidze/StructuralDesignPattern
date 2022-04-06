@@ -10,6 +10,10 @@ using System;
 using static Adapter._2proviers.StarWarsCharacterDisplayService;
 using Facade;
 using Proxy;
+using ProtectedProxy;
+using SmartProxy;
+using System.Text;
+using FlyWeight;
 
 namespace StucturalDesignPattern
 {
@@ -19,11 +23,11 @@ namespace StucturalDesignPattern
         {
 
 
-     
-
-
 
             Console.ReadKey();
+
+            FlyWeight();
+            SmartProxy();
             Proxy();
             Facade();
             Composite();
@@ -34,6 +38,53 @@ namespace StucturalDesignPattern
             Adapter3();
             Adapter2();
             Adapter();
+
+        }
+        public static void FlyWeight()
+        {
+
+            var abunchOfCharacter = "abba";
+            var characretFactory = new CharacterFactory();
+            var characterObject = characretFactory.GetCharacter(abunchOfCharacter[0]);
+
+            characterObject.Draw("Arial", 12);
+
+
+            var paragrahp = characretFactory.CraeteParagrahp(new System.Collections.Generic.List<ICharacter>() { characterObject }, 1);
+            paragrahp.Draw("culia", 12);
+        }
+        public static void SmartProxy()
+        {
+            var _testFile = "output.txt";
+
+            var fs = new FileSmartProxy();
+
+            byte[] outputBytes1 = Encoding.ASCII.GetBytes("1. ardalis.com\n");
+            byte[] outputBytes2 = Encoding.ASCII.GetBytes("2. weeklydevtips.com\n");
+            using var file = fs.OpenWrite(_testFile);
+            using var file2 = fs.OpenWrite(_testFile);
+
+            file.Write(outputBytes1);
+            file2.Write(outputBytes2);
+
+            file.Close();
+            file2.Close();
+
+            //     var fs = new FileSmartProxy();
+
+            //     byte[] outputBytes1 = Encoding.ASCII.GetBytes("1. ardalis.com\n");
+            //     byte[] outputBytes2 = Encoding.ASCII.GetBytes("2. weeklydevtips.com\n");
+
+            //     using var file = fs.OpenWrite(_testFile);
+            ////     Assert.Throws<IOException>(() =>
+            //         //var file2 = fs.OpenWrite(_testFile)); can't run this code
+            //         fs.OpenWrite(_testFile);
+
+            //     file.Write(outputBytes1);
+            //     //file2.Write(outputBytes2); // we never get here
+
+            //     file.Close();
+            //     //file2.Close(); // we never get here
 
         }
         public static void Proxy()

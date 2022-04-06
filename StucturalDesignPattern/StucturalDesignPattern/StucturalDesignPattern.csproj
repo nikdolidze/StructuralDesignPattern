@@ -15,7 +15,10 @@
     <ProjectReference Include="..\Decorator2\Decorator2.csproj" />
     <ProjectReference Include="..\Decorator\Decorator.csproj" />
     <ProjectReference Include="..\Facade\Facade.csproj" />
+    <ProjectReference Include="..\FlyWeight\FlyWeight.csproj" />
+    <ProjectReference Include="..\ProtectedProxy\ProtectedProxy.csproj" />
     <ProjectReference Include="..\Proxy\Proxy.csproj" />
+    <ProjectReference Include="..\SmartProxy\SmartProxy.csproj" />
   </ItemGroup>
 
 </Project>
